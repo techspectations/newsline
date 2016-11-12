@@ -56,7 +56,7 @@ public class TagView extends Fragment {
         mTagGroup.setOnTagClickListener(new TagGroup.OnTagClickListener() {
             @Override
             public void onTagClick(String tag) {
-                data = tag.toLowerCase();
+                data = tag;
                 async = new Async(data);
                 async.execute();
             }

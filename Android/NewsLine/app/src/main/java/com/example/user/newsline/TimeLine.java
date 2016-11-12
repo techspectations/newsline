@@ -147,7 +147,7 @@ public class TimeLine extends Fragment {
                     newsDetails.jsonValueNews(object);
                     getFragmentManager().beginTransaction()
                             .addToBackStack(null)
-                            .replace(R.id.main_container, newsDetails)
+                            .replace(R.id.container, newsDetails)
                             .commit();
 
                 }catch (Exception e){

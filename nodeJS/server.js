@@ -35,7 +35,9 @@ app.use('/api/populate', require('./routes/populate'));
 app.use('/api/Categories', require('./routes/categories'));
 app.use('/api/Headlines', require('./routes/headlines'));
 app.use('/api/Trending', require('./routes/trending'));
+app.use('/api/news', require('./routes/news'));
 app.use('/api', require('./routes/search'));
+
 
 
 
