@@ -1,0 +1,4 @@
+News happens in the present, but needs to be read from the past. Many a times this is neccessary for getting the full picture. Especially, in these days of social media opinion warfares, news(true or hoax) is being widely used by people as a factual weapon to prove themselves right. Also we have, the set of people who love to equip themselves with better and accurate information in a chronological order. Chronology plays a big part in the way a person interprets, remembers and recreates a specific news.
+Hence we present, NEWSLINE where News represents what happens in the present, what happened in the past and possibly why and how it happened. Thus, its easy for people to understand the news, thus remember and share it better.
+In short, we help searching for the stories around the News you see now. It's more than New's...
+
