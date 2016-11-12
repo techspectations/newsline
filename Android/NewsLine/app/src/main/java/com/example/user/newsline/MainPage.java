@@ -43,6 +43,9 @@ public class MainPage extends Fragment {
         caregories_tv = (TextView) theInflatedView.findViewById(R.id.caregories_tv);
         search_et = (EditText) theInflatedView.findViewById(R.id.search_et);
         go_btn = (Button) theInflatedView.findViewById(R.id.go_btn);
+        data = "Categories";
+        async = new Async(data);
+        async.execute();
 
         headlines_tv.setOnClickListener(new View.OnClickListener() {
             @Override
