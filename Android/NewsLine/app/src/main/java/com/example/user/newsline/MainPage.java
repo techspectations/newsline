@@ -160,7 +160,7 @@ public class MainPage extends Fragment {
 
                 try {
                     TimeLine timeLine = new TimeLine();
-                    timeLine.jsonValues(jsonArray);
+                    timeLine.jsonValues(array);
                     getFragmentManager().beginTransaction()
                             .replace(R.id.main_container, timeLine)
                             .commit();

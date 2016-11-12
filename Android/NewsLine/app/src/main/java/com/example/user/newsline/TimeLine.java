@@ -70,8 +70,8 @@ public class TimeLine extends Fragment {
                         timeline_date_tv = (TextView) timeline_item_view.findViewById(R.id.timeline_date_tv);
                         timeline_news_ll = (LinearLayout) timeline_item_view.findViewById(R.id.timeline_news_ll);
                         timeline_date_tv.setText(date);
-                        for (int j = 0; i < news_jsonarray.length(); i++){
-                            JSONObject news_obj = news_jsonarray.getJSONObject(i);
+                        for (int j = 0; j < news_jsonarray.length(); j++){
+                            JSONObject news_obj = news_jsonarray.getJSONObject(j);
                             final String news_id = news_obj.getString("id");
                             TextView title_tv = new TextView(getActivity());
                             title_tv.setTypeface(null, Typeface.BOLD);

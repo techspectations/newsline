@@ -56,7 +56,7 @@ public class TagView extends Fragment {
         mTagGroup.setOnTagClickListener(new TagGroup.OnTagClickListener() {
             @Override
             public void onTagClick(String tag) {
-                data = tag;
+                data = tag.toLowerCase();
                 async = new Async(data);
                 async.execute();
             }
@@ -93,8 +93,12 @@ public class TagView extends Fragment {
                     if (type == 1) {
                         String heading = jsonObject.getString("heading");
                         JSONArray jsonArray = jsonObject.getJSONArray("values");
-                        Log.d("hgh", jsonArray.toString());
-                        //arrange(jsonArray,heading);
+                        Log.d("array", jsonArray.toString());
+                        arrangeTags(jsonArray, heading);
+                    }else if (type == 2){
+                        JSONArray jsonArray = jsonObject.getJSONArray("values");
+                        Log.d("array",jsonArray.toString());
+                        arrangeTimeLine(jsonArray);
                     }
                 }
             } catch (Exception e) {
@@ -104,5 +108,47 @@ public class TagView extends Fragment {
         }
     }
 
+    public void arrangeTags(final JSONArray jsonArray, final String heading ) {
+
+        final JSONArray array = jsonArray;
+
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                try {
+                    TagView tagView = new TagView();
+                    tagView.jsonValue(array, heading);
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.main_container, tagView)
+                            .commit();
+
+                } catch (Exception e) {
+                    Log.d("e", e.toString());
+                }
+            }
+        });
+    }
+    public void arrangeTimeLine(final JSONArray jsonArray ) {
+
+        final JSONArray array = jsonArray;
+
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                try {
+                    TimeLine timeLine = new TimeLine();
+                    timeLine.jsonValues(array);
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.main_container, timeLine)
+                            .commit();
+
+                } catch (Exception e) {
+                    Log.d("e", e.toString());
+                }
+            }
+        });
+    }
 
 }
